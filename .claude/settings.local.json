@@ -41,7 +41,19 @@
       "Bash(npm install 2>&1)",
       "Bash(rm -rf /Users/dt_flys/Projects/zerocode/test-zerocode && npm test 2>&1)",
       "Bash(npm test -- --runInBand 2>&1)",
-      "Bash(git add -A && git commit -m \"fix: add runInBand to test script for test isolation\")"
+      "Bash(git add -A && git commit -m \"fix: add runInBand to test script for test isolation\")",
+      "Bash(git branch -d feature/zerocode-mvp)",
+      "Bash(git worktree remove /Users/dt_flys/Projects/zerocode/.worktrees/mvp)",
+      "Bash(git --version && git worktree list)",
+      "Bash(git worktree prune && git worktree list)",
+      "Bash(git push origin main)",
+      "Bash(npm run build && node dist/cli/index.js --help)",
+      "Bash(node dist/cli/index.js task init)",
+      "Bash(node dist/cli/index.js task create \"Test Task\" -d \"Testing the CLI\" -p 5)",
+      "Bash(node dist/cli/index.js task list)",
+      "Bash(node dist/cli/index.js task show Task1)",
+      "Bash(npm test -- tests/integration 2>&1)",
+      "Bash(git add -A && git commit -m \"test: add integration tests and fix executor\")"
     ]
   }
 }

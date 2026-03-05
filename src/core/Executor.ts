@@ -77,6 +77,11 @@ export class Executor {
       break;
     }
 
+    // If we exit the loop without returning, mark as failed
+    if (!result.success) {
+      await this.taskManager.updateTaskStatus(taskId, 'failed');
+    }
+
     return result;
   }
 
